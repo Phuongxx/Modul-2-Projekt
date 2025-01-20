@@ -1,0 +1,593 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+body {
+  text-align: center;
+  --primary-color: rgb(0, 128, 0);
+  --background-color: rgb(53, 53, 53);
+  max-width: 100%;
+}
+
+main {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+  background-color: var(--background-color);
+}
+
+.hero-subtext,
+.about-us-text,
+.standorte,
+.support-data {
+  color: #dddddd;
+}
+
+.hallo {
+  height: 300vh;
+}
+
+.header {
+  display: flex;
+  background-color: var(--background-color);
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
+  gap: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  top: 10%;
+  visibility: hidden;
+  position: absolute;
+}
+
+.logo {
+  font-family: minecraft ten;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-left: 10px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.nav-list li {
+  background-color: rgb(204, 204, 204);
+  list-style: none;
+  padding: 60px 0 60px 0;
+  border-bottom: 2px solid black;
+}
+
+.nav-list li a:hover {
+  color: green;
+}
+
+.nav-list li a {
+  font-size: 20px;
+  margin-left: 20px;
+  letter-spacing: 0.1rem;
+}
+
+.nav-link {
+  color: black;
+  font-family: minecraft ten;
+  text-decoration: none;
+}
+
+#menu-bar {
+  display: none;
+}
+
+header label {
+  height: 100%;
+  font-size: 2rem;
+  color: #fff;
+  font-family: minecraft ten;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  align-items: center;
+}
+
+#menu-bar:checked ~ .navbar {
+  visibility: visible;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 10vh);
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(to top, #000000b9, #000000b9),
+    url(IMG/Front_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 5%;
+}
+
+.frontside-shop {
+  width: 100vh;
+  filter: brightness(1);
+}
+
+.hero-title {
+  color: white;
+  font-family: Minecraft Ten;
+  font-size: 3rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero-subtext {
+  font-family: Minecraft Ten;
+  font-size: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.shop-btn,
+.merch-btn {
+  color: white;
+  height: 10vh;
+  font-size: 2rem;
+  /* width: 30vh; */
+  padding: 0px 20px 0px 20px;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.shop-btn:hover,
+.merch-btn:hover {
+  background: #2ab334;
+  border-top: 3px solid #5fab85;
+  border-left: 3px solid #5fab85;
+  border-right: 3px solid #005a2a;
+  border-bottom: 3px solid #005a2a;
+  transition: all 0.5s ease-in-out;
+}
+
+.about-us-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  height: 120vh;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 10%;
+}
+
+.about-us-left {
+  height: 65vh;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.about-us-title {
+  font-size: 2rem;
+  font-family: sans-serif;
+  text-decoration: underline var(--primary-color) 2px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.about-us-text {
+  font-size: 1rem;
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  text-align: left;
+  line-height: 1rem;
+}
+
+.merch-btn {
+  width: 60%;
+}
+
+.about-us-image-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.eingang {
+  grid-column: 1;
+  grid-row: 1/3;
+}
+
+.dinner {
+  grid-column: 2;
+  grid-row: 2/3;
+}
+
+.pizza {
+  grid-column: 2;
+  grid-row: 3/3;
+}
+
+.img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.standort-section {
+  background: linear-gradient(to top, #000000aa, #000000aa),
+    url(IMG/standort-laden.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.standorte {
+  display: flex;
+  width: 260px;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.öffnungszeiten {
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.orte,
+.zeiten {
+  font-size: 1.5rem;
+}
+
+.support-section {
+  display: flex;
+  flex-direction: column;
+  height: 120vh;
+  margin: 0 auto;
+  width: 90%;
+  gap: 5px;
+  margin-top: 5vh;
+}
+
+.support-image {
+}
+
+.support-img {
+  width: 100%;
+}
+
+.support-contact {
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+}
+
+.support-title {
+  display: flex;
+  font-family: minecraft ten;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.support-data {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  font-size: 1.3rem;
+  justify-content: left;
+}
+
+.call-btn,
+.email-btn {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px 10px 20px 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: solid 1px var(--primary-color);
+  width: 30vh;
+}
+
+.email-btn {
+  background-color: transparent;
+}
+
+.email-btn:hover {
+  background-color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.call-btn:hover {
+  background-color: transparent;
+  border: solid 1px var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer {
+  height: 40vh;
+  background-color: rgb(155, 155, 155);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 20vh;
+}
+
+.footer-bottom {
+  height: 10vh;
+}
+
+.footer-text,
+.made-by {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer-text {
+  text-decoration: none;
+}
+
+.footer-text:hover {
+  transition: all 0.3s ease-in-out;
+  color: var(--primary-color);
+}
+@media (min-width: 768px) {
+  .header label {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .navbar {
+    visibility: visible;
+    height: 100%;
+    margin-right: 20px;
+    position: unset;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .nav-list li {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    border-radius: 5px;
+    border: 0;
+  }
+
+  .nav-list li a {
+    padding: 15px;
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+    background-color: rgb(53, 53, 53);
+    display: flex;
+    align-items: center;
+  }
+
+  .shop-btn {
+    font-size: 3rem;
+    padding: 0px 60px 0px 60px;
+    border: solid 2px green;
+    box-shadow: 0 0 30px black;
+    width: 35vh;
+  }
+
+  .hero-section {
+    height: calc(100vh - 10vh);
+  }
+
+  .hero-title {
+    width: 50vh;
+    font-size: 4rem;
+  }
+
+  .hero-subtext {
+    width: 50vh;
+    font-size: 1.5rem;
+  }
+
+  .about-us-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 80vh;
+  }
+  .about-us-left {
+    width: 50%;
+    height: 100%;
+  }
+  .about-us-title {
+    height: 10vh;
+    font-size: 2rem;
+  }
+
+  .about-us-text {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  .merch-btn {
+    width: 30vw;
+    height: 15%;
+  }
+
+  .about-us-image-container {
+    width: 50%;
+    height: 100%;
+  }
+
+  .standort-title {
+    font-size: 4rem;
+    transition: all 0.5s ease-in;
+  }
+
+  .standorte {
+    width: 350px;
+  }
+
+  .support-section {
+    flex-direction: row;
+    gap: 10%;
+    height: 80vh;
+  }
+
+  .support-title {
+    font-size: 3rem;
+  }
+  .support-contact {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 40%;
+  }
+
+  .support-image {
+    height: 80vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .support-img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .footer-top {
+    flex-direction: row;
+    gap: 30px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .nav-list {
+    justify-content: space-around;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+  .hero-section {
+    width: 250vh;
+    height: calc(100vh - 10vh);
+    max-width: 100%;
+
+    right: 0;
+  }
+
+  .hero-title {
+    width: 100vh;
+    font-size: 6rem;
+  }
+
+  .hero-subtext {
+    width: 100vh;
+    font-size: 3rem;
+  }
+
+  .shop-btn {
+    font-size: 3rem;
+    padding: 0px 50px 10px 50px;
+    border: solid 2px green;
+    box-shadow: 0 0 30px black;
+    width: 40vh;
+  }
+
+  .about-us-section {
+    margin-top: 10%;
+  }
+
+  .about-us-left {
+  }
+
+  .about-us-title {
+    font-size: 4rem;
+  }
+
+  .about-us-text {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .merch-btn {
+    width: 40%;
+  }
+  .standort-section {
+    margin-bottom: 20vh;
+  }
+  .standorte {
+    width: 520px;
+  }
+  .support-img {
+    height: 80%;
+  }
+  .footer-top {
+    flex-direction: row;
+    gap: 30px;
+    font-size: 1.5rem;
+  }
+}
